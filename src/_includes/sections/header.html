@@ -13,17 +13,23 @@
             overflow: hidden;
         }
 
-      
+        body.scroll #cs-navigation {
+            /* 53px, same height as the cs-top-container */
+            transform: translateY(-3.3125rem);
+        }
 
-   
+                body.scroll #cs-navigation .cs-logo {
+            height: 50px;
+            transition: all ease .2s;
+        }
 
         #cs-navigation {
             width: 100%;
             /* prevents padding from affecting height and width */
             box-sizing: border-box;
-            background-color:var(--navBg);
+            background-color: #fff;
          border-bottom:5px solid var(--secondary);
-            
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
             position: fixed;
             z-index: 10000;
             transition: transform .3s;
@@ -51,7 +57,7 @@
             padding: 1rem 1.5rem;
             /* prevents padding from affecting height and width */
             box-sizing: border-box;
-            background-color: var(--secondary);
+            background-color: #eee;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -74,7 +80,7 @@
             line-height: 1.5em;
             text-decoration: none;
             margin: 0;
-               color:white;
+               color:black;
             font-family: var(--fontFamily);
             display: flex;
             justify-content: flex-start;
@@ -119,7 +125,7 @@
 
         #cs-navigation .cs-container {
             width: 100%;
-            padding: 1.25rem 1rem;
+            padding: 10px 20px 10px 10px;
             /* prevents padding from affecting height and width */
             box-sizing: border-box;
             display: flex;
@@ -130,7 +136,7 @@
 
         #cs-navigation .cs-logo {
          
-              transition: all ease .2s;
+           
               max-width: 300px;
             width: auto;
             height: 50px;
@@ -146,9 +152,8 @@
         }
 
         #cs-navigation .cs-logo img {
-            max-width: 280px;
+            max-width:180px;
             height: auto;
-            transition: all ease .2s;
             /* ensures the image never overflows the container. It stays contained within it's width and height and expands to fill it then stops once it reaches an edge */
              width: auto;
         }
@@ -161,12 +166,13 @@
             width: 2.875rem;
             height: 2.875rem;
             margin: 0 0 0 auto;
-            background-color: var(--primary);
+            background-color: white;
             border: none;
             display: flex;
             justify-content: center;
             align-items: center;
             transition: transform .6s;
+            border:1px solid #ccc
         }
 
         #cs-navigation .cs-toggle.cs-active {
@@ -236,7 +242,7 @@
             height: 100vh;
             padding-bottom: 3rem;
             opacity: 0;
-            background-color: var(--secondary);
+            background-color: #fff;
             box-shadow: inset rgba(0, 0, 0, 0.2) 0px 8px 24px;
             overflow: hidden;
             position: absolute;
@@ -313,7 +319,7 @@
             line-height: 1.2em;
             text-decoration: none;
             margin: 0;
-            color: var(--navLink);
+            color: var(--headerColor);
             display: inline-block;
             position: relative;
             text-transform: uppercase;
@@ -325,7 +331,7 @@
             content: '';
             width: 100%;
             height: 1px;
-            background: #fff;
+            background: currentColor;
             opacity: 1;
             position: absolute;
             display: none;
@@ -460,7 +466,7 @@
             overflow: hidden;
             opacity: 0;
             visibility: hidden;
-            box-shadow: rgba(0,0, 0, 0.2) 0px 10px 16px;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 10px 16px;
             border-bottom: 5px solid var(--primary);
             /* if you have 8 or more links in your dropdown nav, uncomment the columns property to make the list into 2 even columns. Change it to 3 or 4 if you need extra columns. Then remove the transition delays on the cs-drop-li so they don't have weird scattered animations */
             position: absolute;
@@ -566,10 +572,13 @@
 
     /* Small Desktop - 1024px */
     @media only screen and (min-width: 64rem) {
-   
+        body.scroll #cs-navigation {
+            /* 53px, the ssme height as the cs-top-container */
+            transform: translateY(-3.3125rem);
+        }
 
         body.scroll #cs-navigation .cs-logo {
-            height: 30px;
+            height: 80px;
             transition: all ease .2s;
         }
 
@@ -578,12 +587,12 @@
             padding: 0;
             /* prevents padding from affecting height and width */
             box-sizing: border-box;
-             background-color:var(--navBg);
-           
+            background-color: #fff;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
             position: fixed;
             z-index: 10000;
             transition: transform .3s;
-               
+                border-bottom:5px solid var(--secondary);
         }
 
         #cs-navigation .cs-top-bar {
@@ -612,7 +621,7 @@
             content: '';
             width: 101vw;
             height: 100%;
-            background: var(--secondary);
+            background: #eee;
             opacity: 1;
             position: absolute;
             display: block;
@@ -634,7 +643,7 @@
             line-height: 1.5em;
             text-decoration: none;
             margin: 0;
-            color:white;
+            color:black;
             font-family: var(--fontFamily);
             display: flex;
             justify-content: flex-start;
@@ -707,7 +716,6 @@
             justify-content: center;
             align-items: center;
             z-index: 100;
-            transition: all ease .2s;
         }
 
         #cs-navigation .cs-logo img {
@@ -729,7 +737,7 @@
 
         #cs-navigation .cs-li {
             list-style: none;
-            padding: 1.3375rem 0;
+            padding: 1.9375rem 0;
             /* prevent flexbox from squishing it */
             flex: none;
         }
@@ -740,7 +748,7 @@
             line-height: 1.5em;
             text-decoration: none;
             margin: 0;
-            color: var(--navLink);
+            color: var(--headerColor);
             display: block;
             position: relative;
             transition: color .3s;
@@ -754,7 +762,7 @@
 
         #cs-navigation .cs-li-link.cs-active {
             font-weight: 700;
-            color: var(--primary);
+            color: var(--secondary);
         }
 
         #cs-navigation .cs-button-solid {
@@ -789,7 +797,20 @@
 </style>
 
 <header id="cs-navigation">
-  
+    <div class="cs-top-bar">
+        <div class="cs-top-container">
+            <div class="cs-top-contact">
+                <a href="tel:{{client.phoneFormatted}}" class="cs-top-link">
+                    
+                    When you need more exposure
+                </a>
+              
+            </div>
+            <div class="cs-top-social">
+                
+            </div>
+        </div>
+    </div>
     <div class="cs-container">
         <!--Nav Logo-->
         <a href="/" class="cs-logo" aria-label="back to home">
@@ -806,9 +827,72 @@
                 </div>
             </button>
             <!-- We need a wrapper div so we can set a fixed height on the cs-ul in case the nav list gets too long from too many dropdowns being opened and needs to have an overflow scroll. This wrapper acts as the background so it can go the full height of the screen and not cut off any overflowing nav items while the cs-ul stops short of the bottom of the screen, which keeps all nav items in view no matter how mnay there are-->
-               {% include 'components/nav.html' %}
+            <div class="cs-ul-wrapper">
+                <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
+                    <li class="cs-li">
+                        <a href="/" class="cs-li-link {% if page.url == "/" %} cs-active {% endif %}">
+                            Home
+                        </a>
+                    </li>
+                    <li class="cs-li">
+                        <a href="/about/" class="cs-li-link {% if page.url == "/about/" %} cs-active {% endif %}">
+                            About
+                        </a>
+                    </li>
+                    <!--Copy and paste this cs-dropdown list item and replace any .cs-li with this cs-dropdown group to make a new dropdown and it will work-->
+                    <li class="cs-li cs-dropdown" tabindex="0">
+                        <span href="/services/" class="cs-li-link {% if page.url == "/services/" %} cs-active {% endif %}">
+                            Services
+                            <img class="cs-drop-icon"
+                                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/chev-down.svg"
+                                alt="dropdown icon" width="15" height="15" decoding="async" aria-hidden="true">
+                        </span>
+      <ul class="cs-drop-ul">
+    <li class="cs-drop-li">
+        <a href="/services#concrete-removal" class="cs-li-link cs-drop-link">Concrete Removal</a>
+    </li>
+    <li class="cs-drop-li">
+        <a href="/services#septic-field-installation" class="cs-li-link cs-drop-link">Septic Field Installation</a>
+    </li>
+    <li class="cs-drop-li">
+        <a href="/services#land-clearing" class="cs-li-link cs-drop-link">Land Clearing</a>
+    </li>
+    <li class="cs-drop-li">
+        <a href="/services#demolition" class="cs-li-link cs-drop-link">Demolition</a>
+    </li>
+    <li class="cs-drop-li">
+        <a href="/services#water-sewer-taps" class="cs-li-link cs-drop-link">Water & Sewer Taps</a>
+    </li>
+    <li class="cs-drop-li">
+        <a href="/services#dirt-work" class="cs-li-link cs-drop-link">Dirt Work</a>
+    </li>
+    <li class="cs-drop-li">
+        <a href="/services#site-work" class="cs-li-link cs-drop-link">Site Work</a>
+    </li>
+    <li class="cs-drop-li">
+        <a href="/services#finish-grade" class="cs-li-link cs-drop-link">Finish Grade</a>
+    </li>
+    <li class="cs-drop-li">
+        <a href="/services#trucking" class="cs-li-link cs-drop-link">Trucking</a>
+    </li>
+</ul>
+
+                    </li>
+                       <!--Copy and paste this cs-dropdown list item and replace any .cs-li with this cs-dropdown group to make a new dropdown and it will work-->
+                    <li class="cs-li">
+                        <a href="/photos/" class="cs-li-link {% if page.url == "/photos/" %} cs-active {% endif %}">
+                           Photos
+                        </a>
+                    </li>
+                      <li class="cs-li">
+                        <a href="/contact/" class="cs-li-link {% if page.url == "/contact/" %} cs-active {% endif %}">
+                            Contact Us
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </nav>
-        <a href="/contact" class="cs-button-solid cs-nav-button">{{client.phoneFormatted}}</a>
+        <a href="/contact" class="cs-button-solid cs-nav-button">Free Estimate</a>
         <!--Dark Mode toggle, uncomment button code if you want to enable a dark mode toggle-->
         <!-- <button id="dark-mode-toggle" aria-label="dark mode toggle">
             <svg class="cs-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" style="enable-background:new 0 0 480 480" xml:space="preserve"><path d="M459.782 347.328c-4.288-5.28-11.488-7.232-17.824-4.96-17.76 6.368-37.024 9.632-57.312 9.632-97.056 0-176-78.976-176-176 0-58.4 28.832-112.768 77.12-145.472 5.472-3.712 8.096-10.4 6.624-16.832S285.638 2.4 279.078 1.44C271.59.352 264.134 0 256.646 0c-132.352 0-240 107.648-240 240s107.648 240 240 240c84 0 160.416-42.688 204.352-114.176 3.552-5.792 3.04-13.184-1.216-18.496z"/></svg>

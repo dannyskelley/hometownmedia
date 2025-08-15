@@ -110,7 +110,7 @@
         left: 0;
         opacity: 0;
     }
-   .cs-button-solid:hover { box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.0); border-radius: 12px;}
+   .cs-button-solid:hover { box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.0); border-radius:99px;}
     // Buttons - can be replaced using CodeStitch's "Button" Stitches. Make sure to clear the default .cs-button-solid/outline styles from any new stitches you place.
         // Button - can be replaced using CodeStitch's "Button" Stitches
 
@@ -126,7 +126,7 @@
        
         padding: 20px 30px;
         text-decoration: none;
-    border-radius: 12px;
+    border-radius: 99px;
     font-family: "Nunito Sans";
         font-size: calc(16 / 16 * 1rem);
         font-weight: 700;
@@ -142,7 +142,7 @@
             &:before {
                 width: 100%;
                 opacity: 1;
-               border-radius: 12px;
+               border-radius: 99px;
             }
         }
 
@@ -156,6 +156,7 @@
             display: block;
             background-color: #fff;
             height: 100%;
+            border-radius: 99px;
             border-bottom:2px solid var(--primary);
             transition: all ease .2s;
             opacity: 0;
