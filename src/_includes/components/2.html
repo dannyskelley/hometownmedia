@@ -1,354 +1,178 @@
 <!-- ============================================ -->
-<!--              Side By Side Reverse            -->
+<!--                 Why Choose Us                -->
 <!-- ============================================ -->
-
 
 <style>
   /*-- -------------------------- -->
-<---    Side By Side Reverse    -->
+<---        Why Choose Us       -->
 <--- -------------------------- -*/
 
-/* Mobile - 360px */
-@media only screen and (min-width: 0rem) {
-  #sbsr-2326 {
-    padding: var(--sectionPadding);
-    overflow: hidden;
-    position: relative;
-    z-index: 1;
-    background-color: #fafafa;
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #why-choose-1662 {
+      padding: var(--sectionPadding);
+      background-color: #f7f7f7;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+    }
+
+    #why-choose-1662 .cs-container {
+      width: 100%;
+      max-width: 80rem;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      /* 40px - 64px */
+      gap: clamp(2.5rem, 3.9vw, 4rem);
+    }
+
+    #why-choose-1662 .cs-content {
+      text-align: left;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    #why-choose-1662 .cs-title {
+      margin: 0;
+      max-width: 23ch;
+    }
+
+    #why-choose-1662 .cs-wrapper {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      /* 16px - 32px */
+      gap: clamp(1rem, 3.2vw, 2rem);
+    }
+
+    #why-choose-1662 .cs-card-group {
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column;
+      /* 16px - 32px */
+      gap: clamp(1rem, 2vw, 2rem);
+    }
+
+    #why-choose-1662 .cs-item {
+      list-style: none;
+      /* prevents padding from affecting height and width */
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    #why-choose-1662 .cs-item-wrapper {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+
+    #why-choose-1662 .cs-item-number {
+      font-size: 1.25rem;
+      line-height: 1.2em;
+      font-weight: 700;
+      margin: 0;
+      color: var(--secondary);
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    #why-choose-1662 .cs-h3 {
+      font-size: 1.25rem;
+      line-height: 1.2em;
+      font-weight: 700;
+      margin: 0;
+      color: var(--headerColor);
+    }
+
+    #why-choose-1662 .cs-item-text {
+      font-size: 1rem;
+      line-height: 1.5em;
+      margin: 0;
+      color: var(--bodyTextColor);
+    }
+
+    #why-choose-1662 .cs-floater {
+      /* 246px - 582px */
+      width: clamp(15.375rem, 50vw, 36.375rem);
+      height: auto;
+      position: absolute;
+      right: -4rem;
+      top: -0.5rem;
+      z-index: -1;
+    }
   }
-  #sbsr-2326 .cs-container {
-    width: 100%;
-    /* changes to 1280px at tablet */
-    max-width: 44rem;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* 48px - 64px */
-    gap: clamp(3rem, 4vw, 4rem);
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #why-choose-1662 .cs-wrapper {
+      flex-direction: row;
+      align-items: flex-start;
+    }
   }
-  #sbsr-2326 .cs-content {
-    /* set text align to center if content needs to be centrally aligned */
-    text-align: left;
-    width: 100%;
-    max-width: 36.625rem;
-    display: flex;
-    flex-direction: column;
-    /* aligns content to the left, set to center to centrally align */
-    align-items: flex-start;
-  }
-  #sbsr-2326 .cs-title {
-    max-width: 30ch;
-  }
-  #sbsr-2326 .cs-text {
-    margin-bottom: 1rem;
-  }
-  #sbsr-2326 .cs-text:last-of-type {
-    margin-bottom: 1.5rem;
-  }
-  #sbsr-2326 .cs-button-solid {
-    font-size: 1rem;
-    font-weight: 700;
-    /* 46px - 56px */
-    line-height: clamp(2.875rem, 5.5vw, 3.5rem);
-    text-align: center;
-    text-decoration: none;
-    min-width: 9.375rem;
-    margin: 0;
-    padding: 0 1.5rem;
-    background-color: var(--primary);
-    color: var(--bodyTextColorWhite);
-    display: inline-block;
-    position: relative;
-    z-index: 1;
-  }
-  #sbsr-2326 .cs-button-solid:before {
-    content: "";
-    width: 0%;
-    height: 100%;
-    background: #000;
-    opacity: 1;
-    border-radius: 0.25rem;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    transition: width 0.3s;
-  }
-  #sbsr-2326 .cs-button-solid:hover:before {
-    width: 100%;
-  }
-  #sbsr-2326 .cs-h3 {
-    font-size: 1rem;
-    font-weight: 700;
-    line-height: 1.5em;
-    margin: 0;
-    color: var(--headerColor);
-  }
-  #sbsr-2326 .cs-ul {
-    margin: 0.75rem 0 2rem;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-  }
-  #sbsr-2326 .cs-li {
-    font-size: 1rem;
-    line-height: 1.5em;
-    list-style: none;
-    /* 20px - 24px */
-    padding-left: clamp(1.25rem, 3vw, 1.5rem);
-    color: var(--bodyTextColor);
-    position: relative;
-  }
-  #sbsr-2326 .cs-li strong {
-    color: var(--headerColor);
-  }
-  #sbsr-2326 .cs-li::before {
-    content: "";
-    width: 0.5rem;
-    height: 0.5rem;
-    margin-top: 0.5rem;
-    background-color: var(--secondary);
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: rotate(45deg);
-  }
-  #sbsr-2326 .cs-button-box {
-    font-size: inherit;
-    width: 100%;
-    max-width: 39.375rem;
-    /* 48px - 64px */
-    margin: clamp(3rem, 6.5vw, 4rem) 0 0;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-  }
-  #sbsr-2326 .cs-link {
-    /* using ems for font size and wrapper values so we can scale them with a font size at desktop */
-    text-decoration: none;
-    padding-right: 1.875rem;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 1rem;
-    position: relative;
-  }
-  #sbsr-2326 .cs-link:hover:before {
-    width: 100%;
-    height: 4.5em;
-  }
-  #sbsr-2326 .cs-link:hover .cs-wrapper {
-    transform: scale(1.2);
-  }
-  #sbsr-2326 .cs-link:hover .cs-icon {
-    transform: translateX(0.4375rem);
-  }
-  #sbsr-2326 .cs-link:before {
-    /* light green circle that animates on hover */
-    content: "";
-    width: 3.75em;
-    height: 3.75em;
-    background: var(--primary);
-    opacity: 0.0;
-    position: absolute;
-    display: block;
-    top: 50%;
-    left: 0;
-    z-index: -1;
-    transform: translateY(-50%);
-    transition: width 0.3s, height 0.3s, border-radius 0.3s;
-  }
-  #sbsr-2326 .cs-wrapper {
-    width: 3.75em;
-    height: 3.75em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* prevents flexbox from squishing it */
-    flex: none;
-    transition: transform 0.3s;
-  }
-  #sbsr-2326 .cs-icon {
-    width: 1.5rem;
-    height: auto;
-    display: block;
-    transition: transform 0.3s;
-  }
-  #sbsr-2326 .cs-info {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.25rem;
-  }
-  #sbsr-2326 .cs-header {
-    font-size: 1em;
-    line-height: 1.2em;
-    font-weight: 400;
-    margin: 0;
-    color: var(--bodyTextColor);
-    display: block;
-  }
-  #sbsr-2326 .cs-link-content {
-    font-size: 1.5625em;
-    line-height: 1.2em;
-    font-weight: 700;
-    margin: 0;
-    color: var(--headerColor);
-    display: block;
-  }
-  #sbsr-2326 .cs-image-group {
-    /* scales the whole group based on the view width size and stop when that vales equals .74em, resets at desktop */
-    font-size: min(2.32vw, .9rem);
-    width: 39.375em;
-    height: 36.125em;
-    display: block;
-    position: relative;
-    z-index: 1;
-    order: -1;
-  }
-  #sbsr-2326 .cs-picture {
-    display: block;
-    position: absolute;
-  }
-  #sbsr-2326 .cs-picture img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-  #sbsr-2326 .cs-picture1 {
-    width: 25.75em;
-    height: 25.75em;
-    border-right: 0.875em solid #fff;
-    border-bottom: 0.875em solid #fff;
-    top: 0;
-    bottom: 17.5625em;
-    left: 0;
-  }
-  #sbsr-2326 .cs-picture2 {
-    width: 25.8125em;
-    height: 22em;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
-  }
-  #sbsr-2326 .cs-picture3 {
-    width: 14.5625em;
-    height: auto;
-    bottom: 5.8125em;
-    left: 6.25em;
-  }
-  #sbsr-2326 .cs-picture3 img {
-    position: relative;
-    border-radius: 999px;
-  }
-}
-/* Tablet - 768px */
-@media only screen and (min-width: 48rem) {
-  #sbsr-2326 .cs-container {
-    max-width: 80rem;
-  }
-}
-/* Desktop - 1024px */
-@media only screen and (min-width: 64rem) {
-  #sbsr-2326 .cs-container {
-    flex-direction: row;
-    align-items: stretch;
-  }
-  #sbsr-2326 .cs-button-box {
-    /* add font size scaling to make the elements smaller so they fit horizontally */
-    font-size: min(1.4vw, 1rem);
-    flex-direction: row;
-    flex-wrap: nowrap;
-  }
-  #sbsr-2326 .cs-image-group {
-    font-size: min(1.1vw, 1rem);
-    height: auto;
-    min-height: 36.125em;
-    margin-bottom: 4.375rem;
-    order: initial;
-    flex: none;
-  }
-  #sbsr-2326 .cs-picture1 {
-    height: auto;
-    top: 0;
-    bottom: 10.375em;
-  }
-  #sbsr-2326 .cs-picture2 {
-    height: auto;
-    top: 14.125em;
-  }
-}
-                                
 </style>
 
-<section id="sbsr-2326">
-    <div class="cs-container">
-        <div class="cs-image-group">
-            <!--Top left image-->
-            <picture class="cs-picture cs-picture1">
-                <!--Mobile Image-->
-                <source media="(max-width: 600px)" srcset="/assets/images/bg2.jpg">
-                <!--Tablet and above Image-->
-                <source media="(min-width: 601px)" srcset="/assets/images/bg2.jpg">
-                <img loading="lazy" decoding="async" src="/assets/images/bg2.jpg" alt="wedding photoshoot" width="297" height="366">
-            </picture>
-            <!--Bottom right image-->
-            <picture class="cs-picture cs-picture2">
-                <!--Mobile Image-->
-                <source media="(max-width: 600px)" srcset="/assets/images/bg3.jpg">
-                <!--Tablet and above Image-->
-                <source media="(min-width: 601px)" srcset="/assets/images/bg3.jpg">
-                <img loading="lazy" decoding="async" src="/assets/images/bg3.jpg" alt="photograph of a woman" width="405" height="376">
-            </picture>
-            <!--Middle image-->
-            <picture class="cs-picture cs-picture3">
-                <!--Mobile Image-->
-                <source media="(max-width: 600px)" srcset="/assets/images/icon.jpg">
-                <!--Tablet and above Image-->
-                <source media="(min-width: 601px)" srcset="/assets/images/icon.jpg">
-                <img loading="lazy" decoding="async" src="/assets/images/icon.jpg" alt="children's birthday" width="218" height="155">
-            </picture>
-        </div>
-        <div class="cs-content">
-    <span class="cs-topper" style="color:var(--secondary);">A & A Outdoor LLC</span>
-    <h2 class="cs-title">Don’t Let Concrete Removal or Site Prep Hold You Back</h2>
-    <p class="cs-text">
-        Old concrete, messy demolition, or ungraded land can delay your next project. Hiring the wrong crew leads to hidden costs and sloppy results. We believe your job should be done fast, right, and with no stress.
-    </p>
-    
-    <div class="cs-button-box">
-        <a class="cs-link" href="tel:8105316867">
-            <picture class="cs-wrapper">
-                <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/phone-red2.svg" alt="icon" width="24" height="24">
-            </picture>
-            <div class="cs-info">
-                <span class="cs-header">Call Us</span>
-                <span class="cs-link-content">(810) 531-6867</span>
-            </div>
-        </a>
-        <a class="cs-link" href="mailto:aandaoutdoor@outlook.com">
-            <picture class="cs-wrapper">
-                <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/email-red2.svg" alt="icon" width="24" height="24">
-            </picture>
-            <div class="cs-info">
-                <span class="cs-header">Email Us</span>
-                <span class="cs-link-content">Click To Email</span>
-            </div>
-        </a>
-    </div>        
-</div>
+<section id="why-choose-1662">
+  <div class="cs-container">
+    <div class="cs-content">
 
-      
+      <h2 class="cs-title">Don’t Waste Your Budget on Ads That Don’t Work</h2>
     </div>
+    <div class="cs-wrapper">
+      <ul class="cs-card-group">
+        <li class="cs-item">
+          <span class="cs-item-number">01</span>
+          <div class="cs-item-wrapper">
+            <h3 class="cs-h3">Spending money on ads that never reach the right people</h3>
+           
+          </div>
+        </li>
+        <li class="cs-item">
+          <span class="cs-item-number">02</span>
+          <div class="cs-item-wrapper">
+            <h3 class="cs-h3">Competing with big brands without the same resources</h3>
+           
+          </div>
+        </li>
+
+      </ul>
+      <ul class="cs-card-group">
+        <li class="cs-item">
+          <span class="cs-item-number">03</span>
+          <div class="cs-item-wrapper">
+            <h3 class="cs-h3">Confusing options between cable, streaming, and local networks</h3>
+           
+          </div>
+        </li>
+
+      </ul>
+    </div>
+    <!---SVG Graphic-->
+    <img class="cs-floater" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/diagnol-ovals.svg"
+      alt="graphic" loading="lazy" decoding="async" height="710" aria-hidden="true" width="690">
+    <div class="cs-text" style="background-color: white; padding: 30px; max-width: 1200px; "><B class="cs-topper"
+        style="color: black;">The result?</B> Wasted dollars, missed customers, and frustration.
+<BR><BR>
+      <B>But it doesn’t have to be that way. With the right plan, your ads can bring in real customers, not just views.</B>
+    </div>
+    <a style="margin:0px auto 0px; display: block; max-width: 300px;" href="/contact" class="cs-button-solid">Free
+      Consultation</a>
+  </div>
+  </div>
 
 </section>
-                                

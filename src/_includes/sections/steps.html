@@ -11,7 +11,7 @@
 @media only screen and (min-width: 0rem) {
   #services-1331 {
     padding: var(--sectionPadding);
-    background-color: #99ccff;
+    background-color: var(--secondary);
     position: relative;
     z-index: 1;
   }
@@ -56,6 +56,7 @@
     background-color: #fff;
     grid-column: span 12;
     transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: 12px;
   }
   #services-1331 .cs-item:hover {
     transform: translateY(-1rem);
@@ -156,44 +157,41 @@
         <div class="cs-content">
             <div class="cs-flex-group">
                 <span class="cs-topper" style="color: var(--secondary);">Our Process</span>
-                <h2 class="cs-title">How Pro Tubs LLC Makes It Easy</h2>
+                <h2 class="cs-title" style="color: #fff;">How We Make TV &amp; Streaming Ads Simple</h2>
             </div>
-            <p class="cs-text">
-                We keep it simple. Whether your tub is chipped, stained, or just outdated. Our proven process brings it back to life in just one day. No demolition. No mess.
-            </p>
+          
         </div>
         <ul class="cs-card-group">
- <li class="cs-item">
-    <a href="/contact" class="cs-link">
-        <span class="cs-step">Step 1</span>
-        <h3 class="cs-h3">Schedule Your Service</h3>
-        <p class="cs-item-text">
-            Skip the quote, our flat rate is always $479. Call or message us to pick a date and we’ll take care of the rest.
-        </p>
-    </a>
-</li>
-
+            <li class="cs-item">
+                <a href="/contact" class="cs-link">
+                    <span class="cs-step">Step 1</span>
+                    <h3 class="cs-h3">Schedule a Strategy Call</h3>
+                    <p class="cs-item-text">
+                        Tell us about your business, goals, and Michigan markets. We’ll create a tailored plan to reach the right audience across cable, streaming, and local networks.
+                    </p>
+                </a>
+            </li>
             <li class="cs-item">
                 <a href="/contact" class="cs-link">
                     <span class="cs-step">Step 2</span>
-                    <h3 class="cs-h3">We Refinish in One Day</h3>
+                    <h3 class="cs-h3">Launch Your Campaign</h3>
                     <p class="cs-item-text">
-                        Our expert team arrives on time, protects your space, and gets to work. Most jobs are completed in just a few hours.
+                        We handle everything. Media buying, targeting, and affordable, high quality commercial production. So your ads run where they’ll make the biggest impact.
                     </p>
                 </a>
             </li>
             <li class="cs-item">
                 <a href="/contact" class="cs-link">
                     <span class="cs-step">Step 3</span>
-                    <h3 class="cs-h3">Enjoy Your Like New Tub</h3>
+                    <h3 class="cs-h3">Grow with Confidence</h3>
                     <p class="cs-item-text">
-                        Your tub looks brand new, without the cost of replacement. Durable, glossy, and ready to use in just 24 hours.
+                        Watch your ads bring in real customers. We track performance, adjust when needed, and help you scale the channels that work best for your business.
                     </p>
                 </a>
             </li>
         </ul>
         
-          {% include 'components/cta_button.html' %}
+        {% include 'components/cta_button.html' %}
 </section>
 
                                 

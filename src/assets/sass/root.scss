@@ -51,6 +51,7 @@
         font-size: 100%;
         transition: background-color 0.3s;
         color: var(--bodyTextColor);
+         scroll-behavior: smooth;
     }
 
     *,
@@ -134,7 +135,7 @@
         font-weight: bold;
         // Transition Properties
         color: black;
-        
+              transition: all ease .2s;
         text-align: center;
 
         &:hover {
@@ -143,6 +144,7 @@
                 width: 100%;
                 opacity: 1;
                border-radius: 99px;
+                     transition: all ease .2s;
             }
         }
 
@@ -157,7 +159,7 @@
             background-color: #fff;
             height: 100%;
             border-radius: 99px;
-            border-bottom:2px solid var(--primary);
+            border:3px solid var(--primary);
             transition: all ease .2s;
             opacity: 0;
             
