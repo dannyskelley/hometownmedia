@@ -1,8 +1,8 @@
 module.exports = {
     name: "Home Town Media Group",
-    email: "sales@hometownmediagroup.com",
-    phoneForTel: "248.519.7913",
-    phoneFormatted: "248.519.7913",
+    email: "dareeldredge@yahoo.com",
+    phoneForTel: "248-499-3250",
+    phoneFormatted: "248-499-3250",
     address: {
         lineOne: "14350 Eureka Rd",
         lineTwo: "",
